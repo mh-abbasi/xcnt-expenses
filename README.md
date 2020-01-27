@@ -24,7 +24,7 @@ If you are using windows [Laragon](http://laragon.org/) can be a good choice for
 
 Clone the repository:
 ```
-git clone 
+git clone https://github.com/mh-abbasi/xcnt-expenses.git
 ```
 Navigate to project folder and run commands below:
 ```
@@ -75,3 +75,5 @@ If you don't want to use Laragon you can use PHP built-in web server and run the
 * Documenting the API using [Swagger](https://swagger.io/)
 * Add custom exception handlers for having control to the error messages.
 * Add Login view for the application
+
+> I've added the phpDocs for most part of the code, But if there is a unclear part feel free to ask me for more details
