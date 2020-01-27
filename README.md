@@ -26,6 +26,22 @@ Clone the repository:
 ```
 git clone https://github.com/mh-abbasi/xcnt-expenses.git
 ```
+
+You need a MySQL DB to run the app, Please create a DB (if using Laragon please run the servers first) and change the details in `.env` file in root folder.
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=xcnt
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+If you are using Laragon then you need just to navigate to project address usually `http://folderName.local/` and please change the `APP_URL` in `.env` file.
+
+If you don't want to use Laragon you can use PHP built-in web server and run the project using `php artisan serve` and it will start a development server on `http://localhost:8000`. Please change `APP_URL` to this address please.
+
+
 Navigate to project folder and run commands below:
 ```
 # For installing backend dependencies
@@ -40,23 +56,9 @@ or
 yarn install && yarn dev
 ```
 
-You need a MySQL DB to run the app, Please create a DB (if using Laragon please run the servers first) and change the details in `.env` file in root folder.
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=xcnt
-DB_USERNAME=root
-DB_PASSWORD=
-```
+Then you can use the command `php artisan migrate` to create DB tables.
 
-then you can use the command `php artisan migrate` to create DB tables.
-the last step to add records is running `php artisan cashcog:getdata` and leave the terminal it will get the data, Validate them and store them into the tables.
-
-
-
-If you are using Laragon then you need just to navigate to project address usually `http://folderName.local/` and please change the `APP_URL` in `.env` file.
-If you don't want to use Laragon you can use PHP built-in web server and run the project using `php artisan serve` and it will start a development server on `http://localhost:8000`. Please change `APP_URL` to this address please.
+The last step to add records is running `php artisan cashcog:getdata` and leave the terminal it will get the data, Validate them and store them into the tables.
 
 
 ## Structure
