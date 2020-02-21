@@ -66,6 +66,7 @@ const ExpensesTableWrapper = () => {
         setSortBy('desc');
         setOrderBy('created_at');
         fetchEmployees();
+        getExpenses();
     };
 
     const onOrderChange = (order, sort) => {
